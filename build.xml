@@ -27,7 +27,7 @@
    </target>
 	
    <target name = "test" depends = "compile">
-      <junit>
+      <junit fork="true">
          <classpath refid = "classpath.test" />
          <formatter type = "brief" usefile = "false" />
          <test name = "com.test.TestCalculator" />
