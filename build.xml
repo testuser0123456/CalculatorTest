@@ -34,4 +34,13 @@
       </junit>
    </target>
 	
+<target name = "report" depends = "test">
+	<junitreport todir="./reports">
+    		<fileset dir="./reports">
+        	<include name="TEST-*.xml"/>
+    		</fileset>
+    		<report format="frames" todir="./report/html"/>
+	</junitreport>
+</target>
+	
 </project>
