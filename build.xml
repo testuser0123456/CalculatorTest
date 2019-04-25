@@ -1,4 +1,4 @@
-<project name = "CalculatorTest" default = "test" basedir = ".">
+<project name = "CalculatorTest" default = "report" basedir = ".">
    <property name = "testdir" location = "test" />
    <property name = "srcdir" location = "src" />
    <property name = "full-compile" value = "true" />
