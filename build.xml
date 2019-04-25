@@ -42,7 +42,7 @@
 	
 <target name = "report" depends = "test">
 	<junitreport todir="./reports">
-    		<fileset dir="./reports">
+    		<fileset dir="./reports/raw">
         	<include name="TEST-*.xml"/>
     		</fileset>
     		<report format="frames" todir="./report/html"/>
