@@ -2,6 +2,7 @@
    <property name = "testdir" location = "test" />
    <property name = "srcdir" location = "src" />
    <property name = "full-compile" value = "true" />
+   <property name="reports" location="reports" />
 	
    <path id = "classpath.base"/>
 	
@@ -27,10 +28,15 @@
    </target>
 	
    <target name = "test" depends = "compile">
+	   <mkdir dir="${reports}/raw/" />
       <junit fork="true">
          <classpath refid = "classpath.test" />
-         <formatter type = "brief" usefile = "false" />
-         <test name = "com.test.TestCalculator" />
+         <batchtest fork="yes" todir="${reports}/raw/">
+                <formatter type="xml" />
+                <fileset dir="${srcdir}">
+                    <include name="**/*Test*.java" />
+                </fileset>
+            </batchtest>
       </junit>
    </target>
 	
