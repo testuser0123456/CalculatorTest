@@ -29,7 +29,7 @@
 	
    <target name = "test" depends = "compile">
 	   <mkdir dir="${reports}/raw/" />
-	   	<java classname="com.test.UnrecognizedTests">
+	   	<java classname="com.test.UnrecognizedCases">
 	   	  <arg value="-h"/>
 	   		<classpath refid = "classpath.test"/>
 	   	</java>
