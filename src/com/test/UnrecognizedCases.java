@@ -23,7 +23,7 @@ public class UnrecognizedCases {
 	public void testMultiplication() {
 		System.out.println("##teamcity[testStarted name='testMultiplication']");
 		Assert.assertEquals(15, calculator.multiplication(5, 3));
-		System.out.println("##teamcity[testFinished name='testSubstraction']");
+		System.out.println("##teamcity[testFinished name='testMultiplication']");
 	}
 	
 	public static void main(String args[]) {
